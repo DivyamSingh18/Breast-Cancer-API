@@ -1,7 +1,7 @@
 Flask
 gunicorn
 itsdangerous
-Jinja2==2.10.1
+Jinja2
 MarkupSafe
 Werkzeug
 Pillow>=5.4.0
