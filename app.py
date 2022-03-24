@@ -9,7 +9,7 @@ app = Flask(__name__, template_folder='templates')
 
 @app.route("/cancer")
 def cancer():
-    return render_template(r"C:\Users\Divyam Singh\Desktop\Mine\Test\College Project\Health-App-main\Breast_Cancer API\cancer_model.pkl")
+    return render_template(r"cancer.html")
 
 def ValuePredictor(to_predict_list, size):
     to_predict = np.array(to_predict_list).reshape(1,size)
@@ -29,9 +29,9 @@ def predict():
             result = ValuePredictor(to_predict_list,5)
     
     if(int(result)==1):
-        prediction = "Sorry you chances of getting the disease. Please consult the doctor immediately"
+        prediction = "According to the provided data, you have the chances of getting the disease. Please consult the doctor immediately"
     else:
-        prediction = "No need to fear. You have no dangerous symptoms of the disease"
+        prediction = "No need to fear. No dangerous symptoms of the disease detected "
     return(render_template("result.html", prediction_text=prediction))       
 
 if __name__ == "__main__":
