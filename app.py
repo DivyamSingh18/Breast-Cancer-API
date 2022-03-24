@@ -9,7 +9,7 @@ app = Flask(__name__, template_folder='templates')
 
 @app.route("/cancer")
 def cancer():
-    return render_template(r"cancer_model.pkl")
+    return render_template(r"C:\Users\Divyam Singh\Desktop\Mine\Test\College Project\Health-App-main\Breast_Cancer API\cancer_model.pkl")
 
 def ValuePredictor(to_predict_list, size):
     to_predict = np.array(to_predict_list).reshape(1,size)
